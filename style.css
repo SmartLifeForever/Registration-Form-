@@ -1,0 +1,116 @@
+/* Couleur de fond pour la barre du menu */
+.header {
+    background-color: #aac9ea;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(85, 82, 79);
+}
+
+
+.navbar {
+
+    background-color: #5ebbdc; /* Bleu professionnel */
+
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+
+
+
+}
+
+.navbar a {
+
+    color: #151414;
+
+}
+
+.navbar a:hover {
+
+    color: #ffffff;
+    width: 100%;
+
+}
+
+/* Couleur de fond pour la section des cartes */
+
+.container {
+
+    background-color: #8ec2ef; /* Bleu clair apaisant */
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Style des cartes */
+
+.card {
+
+    border: none;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.card:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Footer */
+
+footer {
+
+    background-color: #333333; /* Gris foncé */
+
+    color: #ffffff;
+
+    padding: 20px 0;
+
+}
+
+/* Bonne année 2025 animé */
+
+.bienvenue {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    color: #05553a;
+
+    text-align: center;
+
+    animation: bienvenueAnimation 2s ease-out infinite;
+    font-style: italic;
+
+}
+
+/* Animation d’apparition */
+
+@keyframes bienvenueAnimation {
+
+    0% { opacity: 0; transform: translateY(-20px); }
+
+    100% { opacity: 1; transform: translateY(0); }
+
+}
