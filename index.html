@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taskApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="TaskController" ng-class="{ 'dark-mode': isDarkMode }">
+  <div class="container">
+    <h1>Task Manager Pro</h1>
+
+    <!-- Mode Switch -->
+    <button class="toggle-mode" ng-click="toggleDarkMode()">
+      {{ isDarkMode ? 'Light Mode ☀️' : 'Dark Mode 🌙' }}
+    </button>
+
+    <!-- Notification -->
+    <div class="notification" ng-if="notification">
+      {{ notification }}
+    </div>
+
+    <!-- Add Task -->
+    <div class="add-task">
+      <input type="text" ng-model="newTask" placeholder="Enter a new task">
+      <button ng-click="addTask()">Add Task</button>
+    </div>
+
+    <!-- Task Filters -->
+    <div class="filters">
+      <button ng-click="filterTasks('all')">All Tasks</button>
+      <button ng-click="filterTasks('active')">Active</button>
+      <button ng-click="filterTasks('completed')">Completed</button>
+    </div>
+
+    <!-- Task List -->
+    <ul class="task-list">
+      <li ng-repeat="task in filteredTasks">
+        <div class="task-item" ng-class="{ 'completed': task.completed }">
+          <span>{{ task.text }} <br> <small>{{ task.timestamp }}</small></span>
+          <div class="task-actions">
+            <button ng-click="toggleComplete($index)">
+              {{ task.completed ? 'Undo' : 'Complete' }}
+            </button>
+            <button ng-click="removeTask($index)">Remove</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+  </html>
+        
