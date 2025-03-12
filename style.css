@@ -1,0 +1,147 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f8f9fa;
+  color: #343a40;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .container {
+  background: #2b2b2b;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #007bff;
+}
+
+/* Task Input */
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.add-task button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background-color: #218838;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  background-color: #d4edda;
+}
+
+.dark-mode .task-item.completed {
+  background-color: #264d38;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-actions button:first-child {
+  background-color: #ffc107;
+}
+
+.task-actions button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Notification */
+.notification {
+  text-align: center;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Mode Switch */
+.toggle-mode {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  }
